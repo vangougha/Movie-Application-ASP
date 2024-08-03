@@ -1,0 +1,40 @@
+﻿@model IEnumerable<MovieViewModel>
+
+@if (Model.Any())
+{
+
+    <h6 class="display-6">
+        Movies (@Model.Count())
+    </h6>
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>Movie Name</th>
+                <th>Movie Degree</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var movie in Model)
+            {
+                <tr>
+                    <td>@movie.MovieName</td>
+                    <td>@movie.MovieDegree</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="btn btn-outline-dark">
+        Click <a class="alert-link" asp-action="Add">here </a> to add another movie.
+    </div>
+}
+
+else
+{
+    <div class="alert alert-info">
+        There are no movies. Please click here to
+        <a class="alert-link" asp-action="Add">
+            add a movie.
+        </a>
+    </div>
+}
