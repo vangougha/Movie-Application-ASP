@@ -1,13 +1,22 @@
-﻿using Filmler_ve_Filimler.Models;
+﻿using Filmler_ve_Filimler.Data;
+using Filmler_ve_Filimler.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace Filmler_ve_Filimler.Controllers
 {
     public class MovieController : Controller
     {
+        private readonly ApplicationDbContext _context;
+
+        public MovieController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
         public IActionResult Index()
         {
-            var model = Repository.Movies;
+            var model = _context.Movies.ToList();
             return View(model);
         }
 
@@ -23,7 +32,8 @@ namespace Filmler_ve_Filimler.Controllers
         {
             if (ModelState.IsValid)
             {
-                Repository.Add(model);
+                _context.Movies.Add(model);
+                _context.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(model);

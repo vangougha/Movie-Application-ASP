@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Can\\Desktop\\Filmler_ve_Filimler\\Filmler_ve_Filimler\\Filmler_ve_Filimler.csproj": {}
+    "C:\\Users\\Can\\Desktop\\Movie-Application-ASP\\Filmler_ve_Filimler\\Filmler_ve_Filimler.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Can\\Desktop\\Filmler_ve_Filimler\\Filmler_ve_Filimler\\Filmler_ve_Filimler.csproj": {
+    "C:\\Users\\Can\\Desktop\\Movie-Application-ASP\\Filmler_ve_Filimler\\Filmler_ve_Filimler.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Can\\Desktop\\Filmler_ve_Filimler\\Filmler_ve_Filimler\\Filmler_ve_Filimler.csproj",
+        "projectUniqueName": "C:\\Users\\Can\\Desktop\\Movie-Application-ASP\\Filmler_ve_Filimler\\Filmler_ve_Filimler.csproj",
         "projectName": "Filmler_ve_Filimler",
-        "projectPath": "C:\\Users\\Can\\Desktop\\Filmler_ve_Filimler\\Filmler_ve_Filimler\\Filmler_ve_Filimler.csproj",
+        "projectPath": "C:\\Users\\Can\\Desktop\\Movie-Application-ASP\\Filmler_ve_Filimler\\Filmler_ve_Filimler.csproj",
         "packagesPath": "C:\\Users\\Can\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Can\\Desktop\\Filmler_ve_Filimler\\Filmler_ve_Filimler\\obj\\",
+        "outputPath": "C:\\Users\\Can\\Desktop\\Movie-Application-ASP\\Filmler_ve_Filimler\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -43,6 +43,18 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

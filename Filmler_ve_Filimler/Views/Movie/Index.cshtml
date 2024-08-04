@@ -1,8 +1,7 @@
-﻿@model IEnumerable<MovieViewModel>
+﻿@model IEnumerable<Filmler_ve_Filimler.Models.MovieViewModel>
 
 @if (Model.Any())
 {
-
     <h6 class="display-6">
         Movies (@Model.Count())
     </h6>
@@ -23,12 +22,10 @@
             }
         </tbody>
     </table>
-
     <div class="btn btn-outline-dark">
-        Click <a class="alert-link" asp-action="Add">here </a> to add another movie.
+        Click <a class="alert-link" href="/Movie/Add">here </a> to add another movie.
     </div>
 }
-
 else
 {
     <div class="alert alert-info">
